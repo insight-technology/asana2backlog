@@ -81,8 +81,7 @@ priority_map[PRIORITY_LOW] = search_from_json_list(priority_list, 'name', '低',
 # At this moment, pybacklogpy does not provied status list api.
 status_map = {}
 status_map[STATUS_MITAIOU] = 1
-status_map[STATUS_TODO] = 99935
-status_map[STATUS_TODO2] = 99935
+status_map[STATUS_TODO] = XXXXX # set your original status id
 status_map[STATUS_SHORICHU] = 2
 status_map[STATUS_KANRYO] = 4
 
@@ -140,8 +139,8 @@ def add_task(the_task_gid, backlog_parent_issue_id):
         priority_id = priority_id,
         category_id = category_id,
         due_date = the_task['due_on'],
-        customField_171939 = tag_values,
-        customField_172131 = goal_setting).json()
+        customField_XXXXXX = tag_values,  # set your custom field
+        customField_YYYYYY = goal_setting).json()
 
     # add comment to the issue
     added_issue_id = added_issue['id']
